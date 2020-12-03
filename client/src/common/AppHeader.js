@@ -24,6 +24,8 @@ class AppHeader extends Component {
         let menuItems;
         // Check if user is logged in
         if(this.props.currentUser) {
+          console.log("Helol");
+          console.log(this.props.currentUser.role);
           // Check the role of the user
           if (this.props.currentUser.role == "ROLE_USER") {
             menuItems = [

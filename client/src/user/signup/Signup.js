@@ -103,7 +103,7 @@ class Signup extends Component {
                 size="large"
                 name="name"
                 autoComplete="off"
-                placeholder="Enter full name as per NRIC"
+                placeholder="Enter full name"
                 value={this.state.name.value}
                 onChange={(event) =>
                   this.handleInputChange(event, this.validateName)
@@ -111,7 +111,7 @@ class Signup extends Component {
               />
             </FormItem>
             <FormItem
-              label="NRIC"
+              label="Username"
               hasFeedback
               validateStatus={this.state.username.validateStatus}
               help={this.state.username.errorMsg}
@@ -119,9 +119,9 @@ class Signup extends Component {
               <Input
                 size="large"
                 name="username"
-                maxLength="9"
+                maxLength="20"
                 autoComplete="off"
-                placeholder="Enter NRIC"
+                placeholder="Enter Username"
                 value={this.state.username.value}
                 onBlur={this.validateUsernameAvailability}
                 onChange={(event) =>
@@ -238,15 +238,15 @@ class Signup extends Component {
     if (!username) {
       return {
         validateStatus: "error",
-        errorMsg: "NRIC may not be empty",
+        errorMsg: "Username may not be empty",
       };
     }
 
-    const NRIC_REGEX = RegExp("^[STFGstfg]\\d{7}[A-Za-z]$");
+    const NRIC_REGEX = RegExp("^[A-Za-z]{2,20}$");
     if (!NRIC_REGEX.test(username)) {
       return {
         validateStatus: "error",
-        errorMsg: "NRIC Format is not valid",
+        errorMsg: "Username Format is not valid",
       };
     } else {
       return {

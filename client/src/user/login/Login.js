@@ -59,14 +59,14 @@ class LoginForm extends Component {
             <Form onSubmit={this.handleSubmit} className="login-form">
                 <FormItem>
                     {getFieldDecorator('username', {
-                        rules: [{ required: true, message: 'Please input your NRIC!' }],
+                        rules: [{ required: true, message: 'Please input your Username!' }],
                     })(
                     <Input 
                         prefix={<Icon type="user" />}
                         size="large"
-                        maxLength="9"
+                        maxLength="20"
                         name="username" 
-                        placeholder="Enter NRIC" />    
+                        placeholder="Enter Username" />    
                     )}
                 </FormItem>
                 <FormItem>
