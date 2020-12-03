@@ -17,7 +17,7 @@
 1. **Clone the application**
 
    ```bash
-   git clone https://github.com/thefiend/Smart-Team.git
+   git clone https://github.com/DarrenLimChuanS/Boxify.git
    cd server
    ```
 
