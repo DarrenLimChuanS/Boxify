@@ -121,6 +121,7 @@ npm run test
 <ul>
   <li><a href="https://travis-ci.com/">Travis CI</a></li>
   <li><a href="https://www.heroku.com/">Heroku</a></li>
+  <li><a href="https://dependabot.com/">Dependabot</a></li>
 </ul>
 
 <a name="team"></a>
